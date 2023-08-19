@@ -1,0 +1,677 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5b6;
+  scroll-behavior: smooth;
+}
+/*CSS for Header_Menu*/
+.container-fluid {
+  margin: 0px auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+header {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: #87cefa;
+  box-shadow: 0 5px 25px rgb(0 0 0/20%);
+  transition: 0.6s;
+}
+header .navbar {
+  max-width: 1250px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+header.sticky {
+  background-color: #87cefa;
+}
+header.sticky .menu .sub-menu {
+  background-color: #0000ff;
+}
+header.sticky .menu li:hover > a {
+  border: none;
+  color: #ba1007e3;
+  text-decoration: none;
+}
+header .navbar .bx-menu {
+  display: none;
+}
+.navigation .sildebar-logo .logo-name,
+.navigation .sildebar-logo .x-bar {
+  display: none;
+}
+header .navbar .logo {
+  display: flex;
+}
+header .navbar .logo .img_lg img {
+  max-width: 100px;
+  height: auto;
+}
+header .navbar .logo .text_hahaki {
+  padding-top: 40px;
+  text-decoration: none;
+  display: none;
+  color: black;
+  font-weight: 500;
+}
+header .navbar .navigation {
+  height: 100%;
+  line-height: 100px;
+  display: flex;
+}
+header .navbar .navigation .menu {
+  display: flex;
+}
+header .navbar .navigation .menu li {
+  list-style: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+}
+header .navbar .navigation .menu li a {
+  height: 100%;
+  color: black;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.navbar .navigation .menu li:hover > a {
+  color: #ba1007e3;
+}
+/*Cầu hình drob-arrow*/
+header .navbar .navigation .menu li .arrow {
+  height: 100%;
+  width: 22px;
+  text-align: center;
+  color: black;
+  line-height: 100px;
+  transition: all 0.3s ease;
+}
+.navbar .navigation .menu li:hover .gt-arrow,
+.navbar .navigation .menu li:hover .khlt-arrow,
+.navbar .navigation .menu li:hover .tl-arrow {
+  transform: rotate(180deg);
+}
+/*Cấu hình sub-menu*/
+.navbar .navigation .menu .sub-menu {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  background: #0000ff;
+  line-height: 40px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 1px 2px rgb(0, 0, 0, 0.2);
+  display: none;
+}
+.navbar .navigation .menu .sub-menu li {
+  padding: 0 22px;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+}
+.navbar .navigation .menu .sub-menu li:hover {
+  background: #003300;
+}
+.navbar .navigation .menu .sub-menu li:last-child a {
+  border: none;
+}
+.navbar .navigation .menu .sub-menu li a {
+  color: white;
+  font-size: 12px;
+  font: 500;
+}
+.navbar .navigation .menu li:hover .gt-sub-menu,
+.navbar .navigation .menu li:hover .khlt-sub-menu,
+.navbar .navigation .menu li:hover .tl-sub-menu {
+  display: block;
+}
+/*Reponsive for Mobile phone */
+@media screen and (max-width: 954px) {
+  /*reponsive for menu bar*/
+  header .navbar {
+    max-width: 100%;
+    padding: 0 5px;
+  }
+  header .navbar .logo .img_lg img {
+    max-width: 100px;
+    height: auto;
+  }
+  header .navbar .logo .text_hahaki {
+    display: block;
+    padding-top: 40px;
+    font-size: 10px;
+  }
+  header .navbar .navigation {
+    display: block;
+    position: fixed;
+    top: 105px;
+    left: -100%;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    background: #87cefa;
+    padding: 20px;
+    line-height: 30px;
+    transition: all 0.5s ease;
+    border-radius: 15px 15px 15px 15px;
+  }
+  header .navbar .navigation .menu li a {
+    color: black;
+    font-weight: 500;
+  }
+  header .navbar .navigation .sildebar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navigation .sildebar-logo .logo-name,
+  .navigation .sildebar-logo .x-bar {
+    display: block;
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  header .navbar .navigation .menu {
+    display: block;
+    margin-top: 15px;
+  }
+  header .navbar .bx-menu {
+    display: block;
+    font-size: 25px;
+  }
+  header .navbar .navigation .menu li {
+    display: block;
+  }
+  .navbar .navigation .menu .sub-menu {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+  }
+  .navbar .navigation .menu .sub-menu li {
+    border-bottom: none;
+  }
+  .navbar .navigation .menu li:hover .gt-sub-menu,
+  .navbar .navigation .menu li:hover .khlt-sub-menu,
+  .navbar .navigation .menu li:hover .tl-sub-menu {
+    display: none;
+  }
+  header .navbar .navigation .menu li .arrow {
+    line-height: 40px;
+  }
+  .navbar .navigation .menu li:hover .gt-arrow,
+  .navbar .navigation .menu li:hover .khlt-arrow,
+  .navbar .navigation .menu li:hover .tl-arrow {
+    transform: rotate(0deg);
+  }
+  .navbar .navigation.show1 .menu .sub-menu.gt-sub-menu {
+    display: block;
+  }
+  .navbar .navigation.show2 .menu .sub-menu.khlt-sub-menu {
+    display: block;
+  }
+  .navbar .navigation.show3 .menu .sub-menu.tl-sub-menu {
+    display: block;
+  }
+  .navbar .navigation.show1 .menu li .gt-arrow,
+  .navbar .navigation.show2 .menu li .khlt-arrow,
+  .navbar .navigation.show3 .menu li .tl-arrow {
+    transform: rotate(180deg);
+  }
+  /*code menu*/
+  .banner {
+    display: block;
+    width: 100%;
+    height: 240px;
+  }
+  .col_right {
+    display: none;
+  }
+  .col_left h1 {
+    font-size: 20px;
+  }
+  .thongtin .top_content .col_left {
+    width: 100%;
+    height: 200px;
+  }
+  .col_left h3 {
+    font-size: 15px;
+  }
+  .col_left .spa {
+    display: none;
+  }
+  .ct_khoahoc .col_kh .khoa_k1 {
+    background-size: 320px 300px;
+  }
+  .ct_khoahoc .col_kh .khoa_k2 {
+    background-size: 320px 300px;
+  }
+  .ct_khoahoc .col_kh .khoa_k3 {
+    background-size: 320px 300px;
+  }
+  .ct_khoahoc .col_kh h3 {
+    font-size: 16px;
+  }
+  .ttchung .col .col-1 {
+    background-size: 320px 300px;
+  }
+  .ttchung .col .col-2 {
+    background-size: 320px 300px;
+  }
+  .ttchung .col .col-3 {
+    background-size: 320px 300px;
+  }
+}
+/*Cau hinh phan banner*/
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 100px;
+  left: 0px;
+  overflow: hidden;
+  border: 5px solid #f8f8f8;
+  border-radius: 15px 15px 15px 15px;
+}
+.images {
+  width: 100%;
+  display: flex;
+  animation: slides 16s infinite;
+}
+@keyframes slides {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0%);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  55% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-200%);
+  }
+  80% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+img {
+  width: 100%;
+}
+/*------Cau hinh ve thong tin chung toi*/
+
+.thongtin {
+  display: block;
+  background-image: url("../image/lt11.jpeg");
+  width: 100%;
+  height: 620px;
+  right: 20px;
+  left: 20px;
+  border-radius: 15px 15px 15px 15px;
+}
+.vchungtoi h5 {
+  color: rgba(255, 255, 0, 0.785);
+  font-size: 35px;
+  padding: 10px;
+  font-weight: 500;
+}
+.noidung > p {
+  color: #f8f8f8;
+  font-size: 15px;
+  text-align: justify;
+  margin-left: 15px;
+  font-weight: bold;
+  padding-right: 10px;
+}
+.timhieuthem {
+  display: block;
+  width: 130px;
+  height: 25px;
+  background-color: yellow;
+  text-align: center;
+  margin: 25px 40px;
+  border-radius: 10px 10px 10px 10px;
+}
+.timhieuthem a {
+  text-align: center;
+  padding: 5px;
+  font-size: 15px;
+  color: #0202ff;
+}
+.top_content {
+  margin-top: 30px;
+  height: 407px;
+  width: 100%;
+  margin-left: 0px;
+}
+.col_left {
+  width: 42%;
+  height: 100%;
+}
+.col_left h1 {
+  color: rgba(255, 255, 0, 0.785);
+  font-weight: 500;
+}
+.col_left h3 {
+  color: #f8f8f8;
+  font-weight: 500;
+}
+.col_left .spa {
+  color: yellow;
+  font-size: 40px;
+  font-weight: bold;
+}
+.col_right {
+  width: 58%;
+  height: 100%;
+  background-image: url("../image/xe1.png");
+  background-size: 100% 100%;
+  border-radius: 220px 100px 220px 55px;
+}
+
+/*Cau hinh cac khoa hoc tai hahaki*/
+.hahaki {
+  display: flex;
+  justify-content: center;
+}
+.kh_hahaki {
+  width: 343px;
+  height: 425px;
+}
+.kh_hahaki h3 {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.381);
+  margin-top: 10px;
+}
+.kh_hahaki h5 {
+  text-align: center;
+  color: #00ced1;
+  font-style: oblique;
+  font-size: 25px;
+}
+.img_logo {
+  height: 325px;
+  background-size: cover;
+}
+.logo_1 {
+  background-image: url("../image/logo.png");
+}
+/*Cau hinh cac khoa hoc*/
+.ct_khoahoc {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.col_kh {
+  background: white;
+  width: 400px;
+  height: 560px;
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.col_kh_image {
+  background-color: aqua;
+  height: 300px;
+  margin: bottom 15px;
+}
+.col_kh h3 {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+.col_kh p {
+  text-align: left;
+  font-size: 16px;
+  margin-left: 10px;
+}
+.col_kh a {
+  background-color: #87cefa;
+  color: black;
+  padding: 15px 20px;
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 15px;
+}
+.khoa_k1 {
+  background-image: url("../image/python.jpeg");
+  background-size: 400px 300px;
+}
+.khoa_k2 {
+  background-image: url("../image/tranhvatcan.webp");
+  background-size: 400px 300px;
+}
+.khoa_k3 {
+  background-image: url("../image/rb_android.png");
+  background-size: 400px 300px;
+}
+.col_kh:hover div {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Cấu hình về lô trinh và lịch khai giảng */
+.ttchung {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.col {
+  background: white;
+  width: 400px;
+  height: 400px;
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.col h3 {
+  text-align: center;
+  color: black;
+}
+.col button {
+  display: block;
+  margin-top: 20px;
+  margin-left: 35%;
+  border-radius: 12px 12px;
+  border-radius: 25px;
+}
+.col-image {
+  background-color: aqua;
+  height: 300px;
+  margin: bottom 15px;
+}
+.col-1 {
+  background-image: url("../image/lophoc1.jpeg");
+  background-size: 400px 300px;
+}
+.col-2 {
+  background-image: url("../image/lotrinhhoc.jpeg");
+  background-size: 400px 300px;
+}
+.col-3 {
+  background-image: url("../image/dktuvan.jpeg");
+  background-size: 400px 300px;
+}
+.col:hover div {
+  transform: scale(1.1);
+  opacity: 0.8;
+  filter: sepia(40%);
+}
+.col:hover button {
+  background-color: #87cefa;
+  color: black;
+}
+/* Cấu hình về thông tin lien he*/
+.footer_thongtin {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+.tt_lienhe {
+  background-color: rgba(0, 0, 0, 0.789);
+  width: 460px;
+  height: 400px;
+}
+.tt_lienhe img {
+  height: 150px;
+  width: 150px;
+  margin-left: 30px;
+  background-color: #f8f8f8;
+  border-radius: 75px 75px 75px;
+  margin-top: 10px;
+}
+.tt_lienhe h4 {
+  margin-left: 30px;
+  margin-top: 20px;
+  text-align: left;
+  color: #f8f8f8;
+}
+/* Cấu hình về thông tin menu */
+.tt_chung {
+  background-color: rgba(0, 0, 0, 0.789);
+  width: 460px;
+  height: 400px;
+}
+.tt_chung h4 {
+  text-align: center;
+  border: 3px solid #f8f8f8;
+  color: #f8f8f8;
+}
+#tt_menu li {
+  text-decoration: none;
+  border: none;
+  list-style: none;
+  font-size: 18px;
+  padding: 15px;
+}
+#tt_menu li a {
+  color: #f5f5f5;
+}
+#tt_menu li:hover a {
+  color: darkkhaki;
+}
+/*cau hinh ve thong tin tai khoan*/
+.tt_taikhoan {
+  background-color: rgba(0, 0, 0, 0.789);
+  width: 460px;
+  height: 400px;
+}
+.tt_taikhoan i {
+  font-size: 10px;
+  color: #f8f8f8;
+  margin-top: 16px;
+  margin-left: 10px;
+}
+.tt_taikhoan h4 {
+  margin: 10px;
+  margin-left: 10px;
+  color: #f8f8f8;
+}
+.tt_face {
+  width: 360;
+  height: 220px;
+}
+.tt_face h4 {
+  text-align: center;
+  padding-top: 5px;
+}
+.img_face {
+  width: 360px;
+  height: 200px;
+  background-image: url("../image/img_face.jpeg");
+  background-size: cover;
+}
+.img_face .img_tt {
+  width: 360px;
+  height: auto;
+  display: flex;
+}
+.img_tt img {
+  display: block;
+  width: 80px;
+  height: auto;
+  margin-left: 30px;
+  background-color: #f8f8f8;
+  font-weight: 500;
+  border-radius: 75px 75px 75px;
+  margin-top: 5px;
+}
+.img_tt a {
+  padding-top: 5px;
+  padding-left: 10px;
+  color: black;
+  font-weight: 500;
+  background: #87cefa;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  padding-right: 5px;
+  border-radius: 10px 10px 10px 10px;
+}
+.img_face .logo_fb {
+  background: #87cefa;
+  margin-top: 65px;
+  margin-left: 30px;
+  font-size: 15px;
+  margin-right: 210px;
+  padding: 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+.img_face .logo_fb a {
+  color: black;
+  font-weight: 500;
+}
+
+/* Cấu hình nút back to top*/
+.bt_up {
+  height: 50px;
+  width: 50px;
+  bottom: 55px;
+  right: 25px;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+  background-color: #27ae60;
+  position: fixed;
+  border-radius: 25%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all.4s;
+}
+.bt_up.active {
+  bottom: 35px;
+  pointer-events: auto;
+  opacity: 1;
+  background-color: #27ae60;
+  color: white;
+}

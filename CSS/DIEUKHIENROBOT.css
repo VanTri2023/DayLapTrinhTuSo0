@@ -1,0 +1,558 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5b6;
+  scroll-behavior: smooth;
+}
+/*CSS for Header_Menu*/
+.container-fluid {
+  margin: 0px auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+header {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: #87cefa;
+  box-shadow: 0 5px 25px rgb(0 0 0/20%);
+  transition: 0.6s;
+}
+header .navbar {
+  max-width: 1250px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+header.sticky {
+  background-color: #87cefa;
+}
+header.sticky .menu .sub-menu {
+  background-color: #0000ff;
+}
+header.sticky .menu li:hover > a {
+  border: none;
+  color: #ba1007e3;
+  text-decoration: none;
+}
+header .navbar .bx-menu {
+  display: none;
+}
+.navigation .sildebar-logo .logo-name,
+.navigation .sildebar-logo .x-bar {
+  display: none;
+}
+header .navbar .logo {
+  display: flex;
+}
+header .navbar .logo .img_lg img {
+  max-width: 100px;
+  height: auto;
+}
+header .navbar .logo .text_hahaki {
+  padding-top: 40px;
+  text-decoration: none;
+  display: none;
+  color: black;
+  font-weight: 500;
+}
+header .navbar .navigation {
+  height: 100%;
+  line-height: 100px;
+  display: flex;
+}
+header .navbar .navigation .menu {
+  display: flex;
+}
+header .navbar .navigation .menu li {
+  list-style: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+}
+header .navbar .navigation .menu li a {
+  height: 100%;
+  color: black;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.navbar .navigation .menu li:hover > a {
+  color: #ba1007e3;
+}
+/*Cầu hình drob-arrow*/
+header .navbar .navigation .menu li .arrow {
+  height: 100%;
+  width: 22px;
+  text-align: center;
+  color: black;
+  line-height: 100px;
+  transition: all 0.3s ease;
+}
+.navbar .navigation .menu li:hover .gt-arrow,
+.navbar .navigation .menu li:hover .khlt-arrow,
+.navbar .navigation .menu li:hover .tl-arrow {
+  transform: rotate(180deg);
+}
+/*Cấu hình sub-menu*/
+.navbar .navigation .menu .sub-menu {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  background: #0000ff;
+  line-height: 40px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 1px 2px rgb(0, 0, 0, 0.2);
+  display: none;
+}
+.navbar .navigation .menu .sub-menu li {
+  padding: 0 22px;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+}
+.navbar .navigation .menu .sub-menu li:hover {
+  background: #003300;
+}
+.navbar .navigation .menu .sub-menu li:last-child a {
+  border: none;
+}
+.navbar .navigation .menu .sub-menu li a {
+  color: white;
+  font-size: 12px;
+  font: 500;
+}
+.navbar .navigation .menu li:hover .gt-sub-menu,
+.navbar .navigation .menu li:hover .khlt-sub-menu,
+.navbar .navigation .menu li:hover .tl-sub-menu {
+  display: block;
+}
+/*Reponsive for Mobile phone */
+@media screen and (max-width: 954px) {
+  /*reponsive for menu bar*/
+  header .navbar {
+    max-width: 100%;
+    padding: 0 5px;
+  }
+  header .navbar .logo .img_lg img {
+    max-width: 100px;
+    height: auto;
+  }
+  header .navbar .logo .text_hahaki {
+    display: block;
+    padding-top: 40px;
+    font-size: 10px;
+  }
+  header .navbar .navigation {
+    display: block;
+    position: fixed;
+    top: 105px;
+    left: -100%;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    background: #87cefa;
+    padding: 20px;
+    line-height: 30px;
+    transition: all 0.5s ease;
+    border-radius: 15px 15px 15px 15px;
+  }
+  header .navbar .navigation .menu li a {
+    color: black;
+    font-weight: 500;
+  }
+  header .navbar .navigation .sildebar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navigation .sildebar-logo .logo-name,
+  .navigation .sildebar-logo .x-bar {
+    display: block;
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  header .navbar .navigation .menu {
+    display: block;
+    margin-top: 15px;
+  }
+  header .navbar .bx-menu {
+    display: block;
+    font-size: 25px;
+  }
+  header .navbar .navigation .menu li {
+    display: block;
+  }
+  .navbar .navigation .menu .sub-menu {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+  }
+  .navbar .navigation .menu .sub-menu li {
+    border-bottom: none;
+  }
+  .navbar .navigation .menu li:hover .gt-sub-menu,
+  .navbar .navigation .menu li:hover .khlt-sub-menu,
+  .navbar .navigation .menu li:hover .tl-sub-menu {
+    display: none;
+  }
+  header .navbar .navigation .menu li .arrow {
+    line-height: 40px;
+  }
+  .navbar .navigation .menu li:hover .gt-arrow,
+  .navbar .navigation .menu li:hover .khlt-arrow,
+  .navbar .navigation .menu li:hover .tl-arrow {
+    transform: rotate(0deg);
+  }
+  .navbar .navigation.show1 .menu .sub-menu.gt-sub-menu {
+    display: block;
+  }
+  .navbar .navigation.show2 .menu .sub-menu.khlt-sub-menu {
+    display: block;
+  }
+  .navbar .navigation.show3 .menu .sub-menu.tl-sub-menu {
+    display: block;
+  }
+  .navbar .navigation.show1 .menu li .gt-arrow,
+  .navbar .navigation.show2 .menu li .khlt-arrow,
+  .navbar .navigation.show3 .menu li .tl-arrow {
+    transform: rotate(180deg);
+  }
+  /*code menu*/
+  .dkrb .khoak3 {
+    background-size: 360px 290px;
+  }
+  .dkrb .khoak3 h1 {
+    font-size: 15px;
+    margin-top: 255px;
+    font-weight: bold;
+    color: white;
+  }
+  .video_dkrb .video_dkrb_center {
+    width: 360px;
+    height: 100%;
+  }
+  .test_h2 h2 {
+    font-size: 15px;
+  }
+  .img_android {
+    padding: 0px 20px;
+  }
+}
+/*Cau hinh phan tiêu đề*/
+.dkrb {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.khoak3 {
+  width: 1300px;
+  height: 290px;
+  margin-top: 100px;
+  background-image: url("../image/dkrobot.png");
+  text-align: center;
+  border-radius: 10px 10px 10px 10px;
+}
+.khoak3 h1 {
+  color: white;
+  margin-top: 220px;
+  font-weight: bold;
+}
+/*Cau hinh phan video */
+.video_dkrb {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 400px;
+}
+.video_dkrb .video_dkrb_center {
+  width: 80%;
+  height: 100%;
+}
+.video_dkrb .video_dkrb_center video {
+  width: 100%;
+  height: 100%;
+}
+/*Cấu hình nội dung đối tượng*/
+.doituong h2 {
+  color: #87cefa;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.doituong p {
+  color: black;
+  margin-left: 20px;
+  font-size: 18px;
+}
+/*Cấu hình mục tiêu khóa học*/
+.muctieu_kh h2 {
+  color: #87cefa;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.muctieu_kh p {
+  color: black;
+  margin-left: 20px;
+  font-size: 18px;
+}
+/*Cấu hình nội dung bài học*/
+.noidung_bh {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 80px;
+  width: 100%;
+}
+.nd_td {
+  width: 400px;
+  height: 80px;
+}
+.nd_td h2 {
+  text-align: center;
+  color: #87cefa;
+  font-weight: bold;
+}
+.nd_td hr {
+  border-bottom: 5px solid #87cefa;
+  width: 200px;
+  margin-left: 90px;
+}
+.nd_bh {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.nd_trai {
+  width: 400px;
+  height: 400px;
+  margin-left: 40px;
+}
+.b1_8 {
+  text-decoration: none;
+  text-align: left;
+}
+.b1_8 li {
+  color: black;
+  font-size: 18px;
+  list-style: none;
+  padding-bottom: 20px;
+}
+.nd_giua {
+  width: 400px;
+  height: 400px;
+  margin-left: 40px;
+}
+.b8_16 {
+  text-decoration: none;
+  text-align: left;
+}
+.b8_16 li {
+  color: black;
+  font-size: 18px;
+  list-style: none;
+  padding-bottom: 20px;
+}
+.nd_phai {
+  width: 400px;
+  height: 400px;
+  margin-left: 40px;
+}
+.b17_24 {
+  text-decoration: none;
+  text-align: left;
+}
+.b17_24 li {
+  color: black;
+  font-size: 18px;
+  list-style: none;
+  padding-bottom: 20px;
+}
+/*Cau hinh ve anh arduino*/
+.test_h2 h2 {
+  margin-top: 20px;
+  text-align: center;
+  color: #0b8ddd;
+  font-weight: bold;
+}
+.img_android img {
+  width: 100%;
+  height: auto;
+}
+/* Cấu hình về nut dang ky*/
+.dk_ngay {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.dk_center {
+  width: 300px;
+  height: 80px;
+}
+.dk_center img {
+  width: 300px;
+  height: 80px;
+}
+/* Cấu hình về thông tin lien he*/
+.footer_thongtin {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+.tt_lienhe {
+  background-color: rgba(0, 0, 0, 0.789);
+  width: 460px;
+  height: 400px;
+}
+.tt_lienhe img {
+  height: 150px;
+  width: 150px;
+  margin-left: 30px;
+  background-color: #f8f8f8;
+  border-radius: 75px 75px 75px;
+  margin-top: 10px;
+}
+.tt_lienhe h4 {
+  margin-left: 30px;
+  margin-top: 20px;
+  text-align: left;
+  color: #f8f8f8;
+}
+/* Cấu hình về thông tin menu */
+.tt_chung {
+  background-color: rgba(0, 0, 0, 0.789);
+  width: 460px;
+  height: 400px;
+}
+.tt_chung h4 {
+  text-align: center;
+  border: 3px solid #f8f8f8;
+  color: #f8f8f8;
+}
+#tt_menu li {
+  text-decoration: none;
+  border: none;
+  list-style: none;
+  font-size: 18px;
+  padding: 15px;
+}
+#tt_menu li a {
+  color: #f5f5f5;
+}
+#tt_menu li:hover a {
+  color: darkkhaki;
+}
+/*cau hinh ve thong tin tai khoan*/
+.tt_taikhoan {
+  background-color: rgba(0, 0, 0, 0.789);
+  width: 460px;
+  height: 400px;
+}
+.tt_taikhoan i {
+  font-size: 10px;
+  color: #f8f8f8;
+  margin-top: 16px;
+  margin-left: 10px;
+}
+.tt_taikhoan h4 {
+  margin: 10px;
+  margin-left: 10px;
+  color: #f8f8f8;
+}
+.tt_face {
+  width: 360;
+  height: 220px;
+}
+.tt_face h4 {
+  text-align: center;
+  padding-top: 5px;
+}
+.img_face {
+  width: 360px;
+  height: 200px;
+  background-image: url("../image/img_face.jpeg");
+  background-size: 330px 200px;
+}
+.img_face .img_tt {
+  width: 360px;
+  height: auto;
+  display: flex;
+}
+.img_tt img {
+  display: block;
+  width: 80px;
+  height: auto;
+  margin-left: 30px;
+  background-color: #f8f8f8;
+  font-weight: 500;
+  border-radius: 75px 75px 75px;
+  margin-top: 5px;
+}
+.img_tt a {
+  padding-top: 5px;
+  padding-left: 10px;
+  color: black;
+  font-weight: 500;
+  background: #87cefa;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  padding-right: 5px;
+  border-radius: 10px 10px 10px 10px;
+}
+.img_face .logo_fb {
+  background: #87cefa;
+  margin-top: 65px;
+  margin-left: 30px;
+  font-size: 15px;
+  margin-right: 210px;
+  padding: 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+.img_face .logo_fb a {
+  color: black;
+  font-weight: 500;
+}
+
+/* Cấu hình nút back to top*/
+.bt_up {
+  height: 50px;
+  width: 50px;
+  bottom: 55px;
+  right: 25px;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+  background-color: #27ae60;
+  position: fixed;
+  border-radius: 25%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all.4s;
+}
+.bt_up.active {
+  bottom: 35px;
+  pointer-events: auto;
+  opacity: 1;
+  background-color: #27ae60;
+  color: white;
+}

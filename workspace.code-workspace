@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "../../ FrontEndBasic/VTI_LAB_7"
+	},
+	{
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "FrontEndWeb"
+  }
+}

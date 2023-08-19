@@ -1,0 +1,594 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  scroll-behavior: smooth;
+}
+nav {
+  width: 100%;
+  height: 100px;
+  background-color: #87cefa;
+}
+
+.container {
+  margin: 0px auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+/*Cau hinh phan header*/
+header {
+  background-color: #87cefa;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  z-index: 10;
+}
+header.sticky {
+  background-color: #87cefa;
+}
+header.sticky #main-menu li a {
+  background-color: #87cefa;
+  color: black;
+}
+header.sticky #main-menu ul.sub-menu {
+  background-color: #87cefa;
+}
+header.sticky #main-menu li:hover > a {
+  border: none;
+  color: #ba1007e3;
+  text-decoration: none;
+}
+.menu {
+  margin: 0px auto;
+  width: 100%;
+}
+
+nav ul {
+  float: right;
+  list-style-type: none;
+}
+#logo {
+  padding: 5px 50px;
+}
+#logo img {
+  max-width: 100px;
+  height: auto;
+}
+#main-menu > li {
+  position: relative;
+  display: inline-block;
+  margin: 40px 20px;
+}
+#main-menu > li > a {
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  text-transform: capitalize;
+  padding: 5px 20px;
+}
+#main-menu ul.sub-menu {
+  position: absolute;
+  background-color: #87cefa;
+  padding: 5px 0px;
+  list-style: none;
+  width: 240px;
+  display: none;
+  z-index: 10;
+}
+#main-menu ul.sub-menu li {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+#main-menu ul.sub-menu li a {
+  font-size: 15px;
+  color: black;
+}
+#main-menu li:hover > a {
+  border: none;
+  color: #ba1007e3;
+  text-decoration: none;
+}
+
+#main-menu li:hover ul.sub-menu {
+  display: block;
+}
+
+#main-menu ul.sub-menu li:hover > a {
+  border-bottom: 2px solid #059d79e3;
+}
+#main-menu ul.sub-menu li:last-child a {
+  border: none;
+}
+#main-menu > li > a {
+  position: relative;
+}
+#main-menu > li > a::before {
+  content: "";
+  height: 4px;
+  width: 0%;
+  background: #059d79e3;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#main-menu > li:hover > a::before {
+  width: 100%;
+}
+#checkbtn {
+  float: right;
+  line-height: 100px;
+  margin-right: 10px;
+  font-size: 25px;
+  color: black;
+  display: none;
+}
+#check {
+  display: none;
+  cursor: pointer;
+}
+
+/* Cấu hình cho màn hình điện thoại*/
+@media screen and (max-width: 952px) {
+  #check:checked ~ ul {
+    left: 0;
+  }
+  #checkbtn {
+    display: block;
+  }
+  #main-menu {
+    width: 100%;
+    height: 100vh;
+    background-color: #87cefa;
+    position: absolute;
+    top: 100px;
+    left: -100%;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  #main-menu > li {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    width: 100%;
+  }
+  #main-menu li ul {
+    position: relative;
+    width: 100%;
+  }
+  #main-menu li ul li {
+    background-color: #87cefa;
+  }
+}
+/*Cau hinh phan banner*/
+.banner {
+  width: 100%;
+  height: 1080px;
+  position: absolute;
+  top: 100px;
+  overflow: hidden;
+  border: 5px solid #f8f8f8;
+  border-radius: 6px;
+}
+
+.images {
+  width: 100%;
+  display: flex;
+  animation: slides 16s infinite;
+}
+@keyframes slides {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0%);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  55% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-200%);
+  }
+  80% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+img {
+  width: 100%;
+}
+/*------Cau hinh ve thong tin chung toi*/
+.thongtin {
+  position: absolute;
+  top: 1020px;
+  background-image: url("../image/lt11.jpeg");
+  width: 100%;
+  height: 650px;
+}
+.vchungtoi {
+  color: rgba(255, 255, 0, 0.785);
+  font-size: 40px;
+}
+.noidung > p {
+  color: #f8f8f8;
+  font-size: 20px;
+  text-align: justify;
+  margin-left: 45px;
+}
+.thongtin button {
+  margin-left: 45px;
+  width: 200px;
+}
+.row {
+  margin-top: 30px;
+  height: 407px;
+  width: 1200px;
+  margin-left: 45px;
+}
+.col_left {
+  width: 600px;
+  height: 100%;
+  margin-top: 20px;
+}
+.col_left h3 {
+  color: #f8f8f8;
+  margin-left: 40px;
+  font-size: 22px;
+}
+.col_left span {
+  font-size: 40px;
+  color: yellow;
+}
+#like {
+  font-size: 60px;
+}
+.col_right {
+  width: 600px;
+  height: 407px;
+  background-image: url("../image/xe1.png");
+}
+/* Cấu hình về lô trinh và lịch khai giảng */
+.ttchung {
+  position: absolute;
+  top: 1670px;
+  background-color: #f8f8f8;
+  background-image: url("../image/nettc.jpeg");
+  height: 480px;
+  width: 100%;
+  display: flex;
+}
+/*Cau Hinh Khai Giảng*/
+.khaigiang {
+  width: 380px;
+  height: 380px;
+  background-color: rgba(0, 0, 0, 0.598);
+  overflow: hidden;
+  /*margin: 50px 30px;*/
+  margin-left: 50px;
+  margin-right: 30px;
+  margin-top: 100px;
+}
+.khaigiang img {
+  height: 270px;
+  width: 100%;
+}
+.khaigiang:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+  filter: sepia(40%);
+}
+.khaigiang:hover > button {
+  background-color: #f8f8f8;
+  color: black;
+}
+#bt_kg {
+  height: 45px;
+  margin-left: 100px;
+  width: 180px;
+  border-radius: 15px 15px 15px;
+  margin-top: 30px;
+  display: block;
+}
+.khaigiang h3 {
+  color: #f8f8f8;
+  text-align: center;
+  margin-top: 10px;
+}
+/* Cấu hình lộ trình*/
+.lotrinh {
+  width: 380px;
+  height: 380px;
+  background-color: rgba(0, 0, 0, 0.598);
+  overflow: hidden;
+  /*margin: 50px 30px;*/
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 100px;
+}
+.lotrinh img {
+  height: 270px;
+  width: 100%;
+}
+.lotrinh:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+  filter: sepia(40%);
+}
+.lotrinh h3 {
+  color: #f8f8f8;
+  text-align: center;
+  margin-top: 10px;
+}
+.lotrinh:hover > button {
+  background-color: #f8f8f8;
+  color: black;
+}
+#bt_lt {
+  height: 45px;
+  margin-left: 100px;
+  width: 180px;
+  border-radius: 15px 15px 15px;
+  margin-top: 30px;
+  display: block;
+}
+/* Cấu hình dk tu vấn*/
+.dktuvan {
+  width: 380px;
+  height: 380px;
+  background-color: rgba(0, 0, 0, 0.598);
+  /*margin: 50px 30px;*/
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 100px;
+  overflow: hidden;
+}
+.dktuvan img {
+  height: 270px;
+  width: 100%;
+}
+.dktuvan:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+  filter: sepia(40%);
+}
+.dktuvan h3 {
+  color: #f8f8f8;
+  text-align: center;
+  margin-top: 10px;
+}
+.dktuvan:hover > button {
+  background-color: #f8f8f8;
+  color: black;
+}
+#bt_tv {
+  height: 45px;
+  margin-left: 100px;
+  width: 180px;
+  border-radius: 15px 15px 15px;
+  margin-top: 30px;
+  display: block;
+}
+/* Cấu hình về các khóa học */
+.cackhoahoc {
+  position: absolute;
+  top: 2150px;
+  height: 800px;
+  width: 100%;
+}
+.tt_khoahoc {
+  height: 300px;
+  width: 100%;
+  margin-top: 20px;
+}
+.tt_khoahoc h3 {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.381);
+  margin-top: 10px;
+}
+.tt_khoahoc h5 {
+  text-align: center;
+  color: #00ced1;
+  font-style: oblique;
+}
+.tt_khoahoc > img {
+  height: 225px;
+  width: 243px;
+  margin-left: 560px;
+}
+/*Cấu hình thông tin khóa học*/
+.ct_khoahoc {
+  width: 100%;
+  height: 500px;
+  background-color: #f8f8f8;
+  display: flex;
+}
+/*Cấu hình thông tin khóa học K1*/
+.khoa_k1 {
+  width: 390px;
+  height: 500px;
+  background-color: #f8f8f8;
+  margin-left: 50px;
+  margin-right: 20px;
+  overflow: hidden;
+}
+.khoa_k1 img {
+  width: 100%;
+  height: 300px;
+  border-bottom: 4px solid #e4f407f3;
+}
+.khoa_k1:hover img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.khoa_k1 h3 {
+  font-size: 20px;
+}
+.khoa_k1 p {
+  text-align: left;
+  font-size: 16px;
+  margin-left: 10px;
+}
+.khoa_k2 {
+  width: 390px;
+  height: 500px;
+  background-color: #f8f8f8;
+  margin-left: 20px;
+  margin-right: 20px;
+  overflow: hidden;
+}
+.khoa_k2 img {
+  width: 100%;
+  height: 300px;
+  border-bottom: 4px solid #e4f407f3;
+}
+.khoa_k2:hover img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.khoa_k2 h3 {
+  font-size: 20px;
+}
+.khoa_k2 p {
+  text-align: left;
+  font-size: 16px;
+  margin-left: 10px;
+}
+.khoa_k3 {
+  width: 390px;
+  height: 500px;
+  background-color: #f8f8f8;
+  margin-left: 20px;
+  margin-right: 20px;
+  overflow: hidden;
+}
+.khoa_k3 img {
+  width: 100%;
+  height: 300px;
+  border-bottom: 4px solid #e4f407f3;
+}
+.khoa_k3:hover img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.khoa_k3 h3 {
+  font-size: 20px;
+}
+.khoa_k3 p {
+  text-align: left;
+  font-size: 16px;
+  margin-left: 10px;
+}
+/* Cấu hình về thông tin footer */
+.footer_thongtin {
+  position: absolute;
+  top: 2950px;
+  background-color: rgba(0, 0, 0, 0.789);
+  height: 400px;
+  width: 100%;
+  display: flex;
+}
+/* Cấu hình về thông tin liên hệ*/
+.tt_lienhe {
+  height: 100%;
+  width: 600px;
+}
+.tt_lienhe img {
+  height: 150px;
+  width: 150px;
+  margin-left: 30px;
+  background-color: #f8f8f8;
+  border-radius: 75px 75px 75px;
+  margin-top: 10px;
+}
+.tt_lienhe h4 {
+  margin-top: 20px;
+  margin-left: 30px;
+  color: #f8f8f8;
+}
+.tt_lienhe i {
+  margin-left: 30px;
+  margin-top: 5px;
+  color: #f8f8f8;
+}
+.tt_lienhe:hover .fb {
+  background-color: darkkhaki;
+}
+/* Cấu hình về thông tin */
+.tt_chung {
+  height: 100%;
+  width: 300px;
+}
+.tt_chung h4 {
+  text-align: center;
+  border: 3px solid #f8f8f8;
+  color: #f8f8f8;
+  padding: 5px;
+}
+#tt_menu li {
+  text-decoration: none;
+  border: none;
+  list-style: none;
+  font-size: 18px;
+  padding: 15px;
+}
+#tt_menu li a {
+  color: #f5f5f5;
+}
+#tt_menu li:hover a {
+  color: darkkhaki;
+}
+.taikhoan {
+  height: 100%;
+  width: 600px;
+}
+.taikhoan i {
+  font-size: 11px;
+  color: #f8f8f8;
+  margin-top: 200px;
+  margin-left: 10px;
+}
+.taikhoan h4 {
+  margin-left: 10px;
+  color: #f8f8f8;
+}
+/* Cấu hình nút back to top*/
+.bt_up {
+  height: 50px;
+  width: 50px;
+  bottom: 35px;
+  right: 10px;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+  background-color: #27ae60;
+  position: fixed;
+  border-radius: 25%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all.4s;
+}
+.bt_up.active {
+  bottom: 35px;
+  pointer-events: auto;
+  opacity: 1;
+  background-color: #27ae60;
+  color: white;
+}
