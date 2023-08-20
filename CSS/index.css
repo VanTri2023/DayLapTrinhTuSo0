@@ -597,7 +597,7 @@ img {
   color: #f8f8f8;
 }
 .tt_face {
-  width: 360;
+  width: 360px;
   height: 220px;
 }
 .tt_face h4 {
@@ -641,7 +641,7 @@ img {
   margin-top: 65px;
   margin-left: 30px;
   font-size: 15px;
-  margin-right: 210px;
+  margin-right: 200px;
   padding: 5px 5px;
   border-radius: 5px 5px 5px 5px;
 }
