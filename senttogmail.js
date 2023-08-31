@@ -15,7 +15,7 @@ function emailsend(){
     var course=document.getElementById("khoahoc_ID").value;
     var thongtin="Xin Chào Bạn!"+"<br/>"+"Đây là thông tin email đến từ Dạy Lập Trình Từ Số 0. Bạn đã đăng ký thành công Khóa học:"+course+"<br/>";
     var xacnhan="Bạn vui lòng kiểm tra lại thông tin bên dưới. Nếu có sai sót vui lòng liên hệ SDT:0358.777.120 (Mr.Thành, Zalo)!<br/>*********************************<br/>";
-    var camon="<br/>*********************************<br/> Chân Thành Cảm ơn ban!<br/> <br/>Admin Website daylaptrinhtuso0"
+    var camon="<br/>*********************************<br/> Chân Thành Cảm Ơn Bạn!<br/> <br/>Admin Website daylaptrinhtuso0"
     var body_email=thongtin+xacnhan+"Name: "+ name + "<br/> PhoneNumber: "+phone+ "<br/> Email: "+email+"<br/> Adress: "+adress+"<br/> Course: "+course+camon;
 console.log(body_email);
     Email.send({
