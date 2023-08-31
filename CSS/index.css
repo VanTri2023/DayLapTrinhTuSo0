@@ -276,6 +276,9 @@ header .navbar .navigation .menu li .arrow {
   .ttchung .col .col-3 {
     background-size: 320px 300px;
   }
+  .tt_chung {
+    display: none;
+  }
 }
 /*Cau hinh phan banner*/
 .banner {
@@ -291,32 +294,38 @@ header .navbar .navigation .menu li .arrow {
 .images {
   width: 100%;
   display: flex;
-  animation: slides 16s infinite;
+  animation: slides 15s infinite;
 }
 @keyframes slides {
   0% {
     transform: translateX(0);
   }
-  25% {
+  15% {
     transform: translateX(0%);
+  }
+  20% {
+    transform: translateX(-100%);
   }
   30% {
     transform: translateX(-100%);
   }
+  35% {
+    transform: translateX(-200%);
+  }
   50% {
+    transform: translateX(-200%);
+  }
+  65% {
     transform: translateX(-100%);
   }
-  55% {
-    transform: translateX(-200%);
+  70% {
+    transform: translateX(-100%);
   }
-  75% {
-    transform: translateX(-200%);
-  }
-  80% {
-    transform: translateX(-300%);
+  85% {
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-300%);
+    transform: translateX(0);
   }
 }
 img {
@@ -443,6 +452,7 @@ img {
   font-size: 20px;
   color: black;
   font-weight: bold;
+  margin-left: 10px;
 }
 .col_kh p {
   text-align: left;
@@ -462,15 +472,15 @@ img {
   border-radius: 15px;
 }
 .khoa_k1 {
-  background-image: url("../image/python.jpeg");
+  background-image: url("../image/k1.jpg");
   background-size: 400px 300px;
 }
 .khoa_k2 {
-  background-image: url("../image/tranhvatcan.webp");
+  background-image: url("../image/rbtuhanh.jpg");
   background-size: 400px 300px;
 }
 .khoa_k3 {
-  background-image: url("../image/rb_android.png");
+  background-image: url("../image/k3.jpg");
   background-size: 400px 300px;
 }
 .col_kh:hover div {
@@ -504,20 +514,19 @@ img {
   border-radius: 25px;
 }
 .col-image {
-  background-color: aqua;
   height: 300px;
   margin: bottom 15px;
 }
 .col-1 {
-  background-image: url("../image/lophoc1.jpeg");
+  background-image: url("../image/lkg.jpg");
   background-size: 400px 300px;
 }
 .col-2 {
-  background-image: url("../image/lotrinhhoc.jpeg");
+  background-image: url("../image/dk.jpg");
   background-size: 400px 300px;
 }
 .col-3 {
-  background-image: url("../image/dktuvan.jpeg");
+  background-image: url("../image/lienhe.jpg");
   background-size: 400px 300px;
 }
 .col:hover div {
@@ -537,72 +546,69 @@ img {
   margin-top: 10px;
 }
 .tt_lienhe {
-  background-color: rgba(0, 0, 0, 0.789);
-  width: 460px;
-  height: 400px;
+  background-color: white;
+  width: 530px;
+  height: 280px;
+  left: 0;
 }
-.tt_lienhe img {
-  height: 150px;
-  width: 150px;
-  margin-left: 30px;
-  background-color: #f8f8f8;
-  border-radius: 75px 75px 75px;
-  margin-top: 10px;
+.tt_lienhe h2 {
+  font-size: 18px;
+  text-align: center;
+  color: #0531f3;
+  font-weight: bold;
+}
+.tt_lienhe .list_tt li {
+  list-style: none;
+  padding-top: 5px;
+  padding-left: 20px;
+}
+.tt_lienhe .list_tt li span {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+.tt_lienhe .list_tt li span .icon {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+.tt_lienhe .list_tt li i {
+  color: #048361c7;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  list-style: none;
 }
 .tt_lienhe h4 {
-  margin-left: 30px;
+  margin-left: 20px;
   margin-top: 20px;
   text-align: left;
-  color: #f8f8f8;
+  color: white;
 }
 /* Cấu hình về thông tin menu */
 .tt_chung {
-  background-color: rgba(0, 0, 0, 0.789);
+  background-color: white;
   width: 460px;
-  height: 400px;
+  height: 280px;
 }
-.tt_chung h4 {
-  text-align: center;
-  border: 3px solid #f8f8f8;
-  color: #f8f8f8;
-}
-#tt_menu li {
-  text-decoration: none;
-  border: none;
-  list-style: none;
-  font-size: 18px;
-  padding: 15px;
-}
-#tt_menu li a {
-  color: #f5f5f5;
-}
-#tt_menu li:hover a {
-  color: darkkhaki;
-}
-/*cau hinh ve thong tin tai khoan*/
+
+/*Thon gtin tai khoan*/
 .tt_taikhoan {
-  background-color: rgba(0, 0, 0, 0.789);
-  width: 460px;
-  height: 400px;
-}
-.tt_taikhoan i {
-  font-size: 10px;
-  color: #f8f8f8;
-  margin-top: 16px;
-  margin-left: 10px;
-}
-.tt_taikhoan h4 {
-  margin: 10px;
-  margin-left: 10px;
-  color: #f8f8f8;
+  background-color: white;
+  width: 420px;
+  height: 280px;
+  padding: 20px;
 }
 .tt_face {
   width: 360px;
   height: 220px;
 }
 .tt_face h4 {
-  text-align: center;
   padding-top: 5px;
+  color: #0531f3;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
 }
 .img_face {
   width: 360px;
@@ -641,13 +647,24 @@ img {
   margin-top: 65px;
   margin-left: 30px;
   font-size: 15px;
-  margin-right: 190px;
+  margin-right: 210px;
   padding: 5px 5px;
   border-radius: 5px 5px 5px 5px;
 }
 .img_face .logo_fb a {
   color: black;
   font-weight: 500;
+}
+
+/* css for copyright*/
+.banquyen {
+  width: 100%;
+  height: 30px;
+}
+.banquyen h6 {
+  color: black;
+  text-align: center;
+  margin-top: 20px;
 }
 
 /* Cấu hình nút back to top*/

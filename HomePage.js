@@ -18,36 +18,6 @@ $(document).ready(function(){
        } 
    });
 });
-//Xử lý nút đăng ký
-$("#MainForm_ID").submit(function (e) { 
-    e.preventDefault();
-   // alert("Bạn vừa nhấn đăng ký đó");
-    //Lấy dữ liệu nhập vào từng biến
-    var hoten_input =$("#fullname_ID").val();
-    var sdt_input =$("#dienthoai_ID").val();
-    var email_input =$("#email_ID").val();
-    var diachi_input =$("#diachi_ID").val();
-    var khoahoc_input =$("#khoahoc_ID").val();
-    //lưu dữ liệu vào 1 đối tượng
-    var nguoi_dangKy ={
-        ho_ten:hoten_input,
-        sdt:sdt_input,
-        email:email_input,
-        diachi:diachi_input,
-        khoahoc:khoahoc_input
-    };
-    //reset gia tri tren input
-    document.getElementById("fullname_ID").value="";
-    document.getElementById("dienthoai_ID").value="";
-    document.getElementById("email_ID").value="";
-    document.getElementById("diachi_ID").value="";
-    document.getElementById("khoahoc_ID").value="";
-    console.log("Thông Tin Đăng Ký: ",nguoi_dangKy);
-    //thong bao dang ky thanh cong
-    alert("Cảm ơn bạn đã đăng ký thành công!");
-    
-
-});
 function handelIntoLKG() {
     window.open("LICHKHAIGIANG.html","_selt");
  }

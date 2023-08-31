@@ -245,6 +245,9 @@ header .navbar .navigation .menu li .arrow {
     width: 360;
     height: 220px;
   }
+  .tt_chung {
+    display: none;
+  }
 }
 /*Cau hinh phan tiêu đề*/
 .logo_hahaki {
@@ -264,8 +267,8 @@ header .navbar .navigation .menu li .arrow {
 .logo_1 {
   background-image: url("../image/logo.png");
 }
-.text_tt h3 {
-  text-align: center;
+.text_tt h1 {
+  margin-left: 30px;
   color: #00ced1;
   font-weight: bold;
 }
@@ -282,7 +285,7 @@ header .navbar .navigation .menu li .arrow {
   margin-top: 10px;
   color: black;
   margin-left: 20px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .tt_maps {
   display: flex;
@@ -311,72 +314,69 @@ header .navbar .navigation .menu li .arrow {
   margin-top: 10px;
 }
 .tt_lienhe {
-  background-color: rgba(0, 0, 0, 0.789);
-  width: 460px;
-  height: 400px;
+  background-color: white;
+  width: 530px;
+  height: 280px;
+  left: 0;
 }
-.tt_lienhe img {
-  height: 150px;
-  width: 150px;
-  margin-left: 30px;
-  background-color: #f8f8f8;
-  border-radius: 75px 75px 75px;
-  margin-top: 10px;
+.tt_lienhe h2 {
+  font-size: 18px;
+  text-align: center;
+  color: #0531f3;
+  font-weight: bold;
+}
+.tt_lienhe .list_tt li {
+  list-style: none;
+  padding-top: 5px;
+  padding-left: 20px;
+}
+.tt_lienhe .list_tt li span {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+.tt_lienhe .list_tt li span .icon {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+.tt_lienhe .list_tt li i {
+  color: #048361c7;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  list-style: none;
 }
 .tt_lienhe h4 {
-  margin-left: 30px;
+  margin-left: 20px;
   margin-top: 20px;
   text-align: left;
-  color: #f8f8f8;
+  color: white;
 }
 /* Cấu hình về thông tin menu */
 .tt_chung {
-  background-color: rgba(0, 0, 0, 0.789);
+  background-color: white;
   width: 460px;
-  height: 400px;
+  height: 280px;
 }
-.tt_chung h4 {
-  text-align: center;
-  border: 3px solid #f8f8f8;
-  color: #f8f8f8;
-}
-#tt_menu li {
-  text-decoration: none;
-  border: none;
-  list-style: none;
-  font-size: 18px;
-  padding: 15px;
-}
-#tt_menu li a {
-  color: #f5f5f5;
-}
-#tt_menu li:hover a {
-  color: darkkhaki;
-}
-/*cau hinh ve thong tin tai khoan*/
+
+/*Thon gtin tai khoan*/
 .tt_taikhoan {
-  background-color: rgba(0, 0, 0, 0.789);
-  width: 460px;
-  height: 400px;
-}
-.tt_taikhoan i {
-  font-size: 10px;
-  color: #f8f8f8;
-  margin-top: 16px;
-  margin-left: 10px;
-}
-.tt_taikhoan h4 {
-  margin: 10px;
-  margin-left: 10px;
-  color: #f8f8f8;
+  background-color: white;
+  width: 420px;
+  height: 280px;
+  padding: 20px;
 }
 .tt_face {
-  width: 360;
+  width: 360px;
   height: 220px;
 }
 .tt_face h4 {
-  text-align: center;
   padding-top: 5px;
+  color: #0531f3;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
 }
 .img_face {
   width: 360px;
@@ -415,7 +415,7 @@ header .navbar .navigation .menu li .arrow {
   margin-top: 65px;
   margin-left: 30px;
   font-size: 15px;
-  margin-right: 190px;
+  margin-right: 210px;
   padding: 5px 5px;
   border-radius: 5px 5px 5px 5px;
 }
@@ -423,7 +423,15 @@ header .navbar .navigation .menu li .arrow {
   color: black;
   font-weight: 500;
 }
-
+.banquyen {
+  width: 100%;
+  height: 30px;
+}
+.banquyen h6 {
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+}
 /* Cấu hình nút back to top*/
 .bt_up {
   height: 50px;
