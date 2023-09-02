@@ -256,28 +256,71 @@ header .navbar .navigation .menu li .arrow {
     display: none;
   }
   .ct_khoahoc .col_kh .khoa_k1 {
-    background-size: 320px 300px;
+    background-size: 350px 300px;
   }
   .ct_khoahoc .col_kh .khoa_k2 {
-    background-size: 320px 300px;
+    background-size: 350px 300px;
   }
   .ct_khoahoc .col_kh .khoa_k3 {
-    background-size: 320px 300px;
+    background-size: 350px 300px;
   }
+
   .ct_khoahoc .col_kh h3 {
     font-size: 16px;
   }
   .ttchung .col .col-1 {
-    background-size: 320px 300px;
+    background-size: 350px 300px;
   }
   .ttchung .col .col-2 {
-    background-size: 320px 300px;
+    background-size: 350px 300px;
   }
   .ttchung .col .col-3 {
-    background-size: 320px 300px;
+    background-size: 350px 300px;
   }
   .tt_chung {
     display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .ct_khoahoc .col_kh .khoa_k1 {
+    background-size: 330px 300px;
+  }
+  .ct_khoahoc .col_kh .khoa_k2 {
+    background-size: 330px 300px;
+  }
+  .ct_khoahoc .col_kh .khoa_k3 {
+    background-size: 330px 300px;
+  }
+
+  .ttchung .col .col-1 {
+    background-size: 330px 300px;
+  }
+  .ttchung .col .col-2 {
+    background-size: 330px 300px;
+  }
+  .ttchung .col .col-3 {
+    background-size: 330px 300px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .ct_khoahoc .col_kh .khoa_k1 {
+    background-size: 310px 300px;
+  }
+  .ct_khoahoc .col_kh .khoa_k2 {
+    background-size: 310px 300px;
+  }
+  .ct_khoahoc .col_kh .khoa_k3 {
+    background-size: 310px 300px;
+  }
+
+  .ttchung .col .col-1 {
+    background-size: 310px 300px;
+  }
+  .ttchung .col .col-2 {
+    background-size: 310px 300px;
+  }
+  .ttchung .col .col-3 {
+    background-size: 310px 300px;
   }
 }
 /*Cau hinh phan banner*/
@@ -451,6 +494,7 @@ img {
   color: black;
   font-weight: bold;
   margin-left: 10px;
+  text-align: center;
 }
 .col_kh p {
   text-align: left;
