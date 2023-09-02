@@ -248,6 +248,10 @@ header .navbar .navigation .menu li .arrow {
   .tt_chung {
     display: none;
   }
+  .tt_hahaki .dc_hahaki p {
+    font-size: 13.5px;
+    margin-left: 5px;
+  }
 }
 /*Cau hinh phan tiêu đề*/
 .logo_hahaki {
@@ -259,6 +263,7 @@ header .navbar .navigation .menu li .arrow {
 .kh_hahaki {
   width: 343px;
   height: 350px;
+  margin: auto;
 }
 .img_logo {
   height: 325px;
@@ -271,6 +276,7 @@ header .navbar .navigation .menu li .arrow {
   margin-left: 30px;
   color: #00ced1;
   font-weight: bold;
+  text-align: center;
 }
 .tt_hahaki {
   display: flex;
@@ -278,14 +284,16 @@ header .navbar .navigation .menu li .arrow {
   justify-content: left;
 }
 .dc_hahaki {
-  width: 100%;
+  width: 550px;
   height: 245px;
+  margin: auto;
 }
 .dc_hahaki p {
   margin-top: 10px;
   color: black;
-  margin-left: 20px;
+  margin-left: 10px;
   font-size: 16px;
+  text-align: left;
 }
 .tt_maps {
   display: flex;

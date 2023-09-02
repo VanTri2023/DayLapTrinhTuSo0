@@ -13,9 +13,9 @@ function emailsend(){
     var email=document.getElementById("email_ID").value;
     var adress=document.getElementById("diachi_ID").value;
     var course=document.getElementById("khoahoc_ID").value;
-    var thongtin="Xin Chào Bạn!"+"<br/>"+"Đây là thông tin email đến từ Dạy Lập Trình Từ Số 0. Bạn đã đăng ký thành công Khóa học:"+course+"<br/>";
-    var xacnhan="Bạn vui lòng kiểm tra lại thông tin bên dưới. Nếu có sai sót vui lòng liên hệ SDT:0358.777.120 (Mr.Thành, Zalo)!<br/>*********************************<br/>";
-    var camon="<br/>*********************************<br/> Chân Thành Cảm Ơn Bạn!<br/> <br/>Admin Website daylaptrinhtuso0"
+    var thongtin="Xin Chào Bạn,"+"<br/>"+"Đây là Email xác nhận bạn đã đăng ký thành công Khóa học: "+course+" tại trung tâm Hahaki."+"<br/>";
+    var xacnhan="Bạn vui lòng kiểm tra lại thông tin mà bạn đã đăng ký. Nếu có sai sót vui lòng liên hệ SĐT: 0358.777.120 (Mr.Thành, Zalo).<br/>*********************************<br/>";
+    var camon="<br/>*********************************<br/> Thông tin chuyển khoản:<br/>STK: 01716.559.301 <br/> (Tiền Phong Bank-HCM)<br/> Tên: Nguyễn Hiếu Thành <br/> <br/> Trân Trọng Cảm Ơn!";
     var body_email=thongtin+xacnhan+"Name: "+ name + "<br/> PhoneNumber: "+phone+ "<br/> Email: "+email+"<br/> Adress: "+adress+"<br/> Course: "+course+camon;
 console.log(body_email);
     Email.send({
@@ -24,7 +24,7 @@ console.log(body_email);
         Password : "728F0891FACA5C6D6B98114B8906BD166C1A",
         To : 'adaylaptrinh@gmail.com,tranvantri2012@gmail.com'+","+email,
         From : "adaylaptrinh@gmail.com",
-        Subject : "Thông Tin Đăng Ký Khóa Học",
+        Subject : "THƯ XÁC NHẬN TỪ TRUNG TÂM HAHAKI",
         Body : body_email
     }).then(
       message => alert("Đã gửi Email!Nếu không nhận được->Vui lòng kiểm tra lại email trong Spam (Thử rác)")

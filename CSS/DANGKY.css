@@ -284,6 +284,7 @@ header .navbar .navigation .menu li .arrow {
   margin-bottom: 30px;
   margin-left: 20px;
   font-weight: bold;
+  text-align: center;
 }
 .dk_ofline p {
   color: black;
@@ -360,8 +361,12 @@ header .navbar .navigation .menu li .arrow {
   margin-top: 2.5px;
 }
 .form-group h4 {
+  margin-top: 5px;
   color: red;
   text-align: center;
+}
+#khoahoc_ID option {
+  font-size: 12px;
 }
 .form-group button {
   justify-content: center;
